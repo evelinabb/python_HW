@@ -10,7 +10,10 @@ a = int(input('Сколько долек шоколадка в ширину ? =>
 b = int(input('Сколько долек шоколадка в длину ? => '))
 c = int(input('Сколько долек Вы хотите отломить? => '))
 
-if c%a==0 or c%b==0:
-    print('yes')
+if c < a * b and (c % a == 0 or c % b == 0):
+    if c%a==0 or c%b==0:
+        print('yes')
+    else:
+        print('no')
 else:
-    print('no')
+    print('Купите шоколадку побольше :(')
